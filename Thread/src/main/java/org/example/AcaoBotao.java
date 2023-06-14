@@ -23,9 +23,12 @@ public class AcaoBotao implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
 
-        TarefaMultiplicacao tarefa = new TarefaMultiplicacao(primeiro, segundo, resultado);
-        Thread threadCalculo = new Thread(tarefa, "Thread Calculadora");
-        threadCalculo.start();
+//        TarefaMultiplicacao tarefa = new TarefaMultiplicacao(primeiro, segundo, resultado);
+//        Thread threadCalculo = new Thread(tarefa, "Thread Calculadora");
+//        threadCalculo.start();
+
+        Multiplicador multiplicador = new Multiplicador(primeiro, segundo, resultado);
+        multiplicador.start();
     }
 
 }
